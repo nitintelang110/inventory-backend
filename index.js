@@ -9,7 +9,7 @@ import cookieParser from 'cookie-parser';
 const app = express();
 app.use(cors({
     /*store the token in browser cookies and to allow that token we use following code we provide three things */
-    origin: ["https://inventory-frontend-puce.vercel.app/"],
+    origin: ["https://inventory-frontend-puce.vercel.app"],
     methods: ['GET', 'POST', 'PUT','DELETE'],
     credentials:true
 
