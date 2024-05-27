@@ -4,9 +4,9 @@ import mysql from 'mysql2';
 const db = mysql.createConnection({
     
     host:"localhost",
-    user:"ntcoder1_inventory_app",
-    password:"HoB%9nOMPHUA",
-    database:"ntcoder1_inventory"
+    user:"root",
+    password:"usbw",
+    database:"inventory"
     
 })
 
