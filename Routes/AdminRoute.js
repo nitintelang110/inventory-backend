@@ -14,7 +14,7 @@ const router = express.Router();
 //for login cross check
 router.post('/adminlogin', (req, res) => {
     /* to check input usr name and id with data base for login  */
- 
+ console.log(req.body)
     const sql = "SELECT * from `admin` Where email =? and passward =?"
      db.query(sql, [req.body.email, req.body.passward], (err, result) => {
         
