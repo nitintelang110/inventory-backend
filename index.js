@@ -9,7 +9,7 @@ import cookieParser from 'cookie-parser';
 const app = express();
 app.use(cors({
     /*store the token in browser cookies and to allow that token we use following code we provide three things */
-    origin: ["https://inventory-frontend-puce.vercel.app/"],
+    origin: ["http://localhost:5173"],
     methods: ['GET', 'POST', 'PUT','DELETE'],
     credentials:true
 
@@ -39,4 +39,6 @@ app.get('/verify', verifyUser, (req, res) => {
   return res.json({Status:true,role:req.role,id:req.id})  
 })
 
-app.listen()
+app.listen(3306,()=>{
+    console.log("on port 3306")
+})
