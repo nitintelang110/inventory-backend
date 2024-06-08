@@ -83,12 +83,11 @@ if (err) {
 router.post("/addorder", (req,res)=>{
 
     const data = req.body;
-
-
+ 
     
     const sql = `INSERT INTO order_table (order_product_name,order_qty,rcd_order_qty,order_date,order_status,order_category,order_party,order_remark,order_no) VALUES ?`;
 
-    let values = data.map(item => [item.order_product_name.toUpperCase(), item.order_qty,item.rcd_order_qty, item.order_date, item.order_status, item.order_category,item.order_party,item.order_remark.toUpperCase(),item.order_no]);
+    let values = data.map(item => [item.order_product_name, item.order_qty,item.rcd_order_qty, item.order_date, item.order_status, item.order_category,item.order_party,item.order_remark,item.order_no]);
 
     
 
